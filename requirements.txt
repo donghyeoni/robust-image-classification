@@ -1,8 +1,8 @@
-torch
-torchvision
-opencv-python
-numpy
-PyWavelets
-pillow
-scikit-image
-tqdm
+torch>=2.2
+torchvision>=0.17
+opencv-python>=4.9
+numpy>=1.26
+PyWavelets>=1.5
+pillow>=10.2
+scikit-image>=0.22
+tqdm>=4.66

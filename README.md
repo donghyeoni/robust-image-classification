@@ -1,5 +1,7 @@
 # Robust Image Classification under Bandwidth Constraints
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg) ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c.svg)
+
 Train a ResNet-18 classifier on a 4-class animal dataset and study how its
 accuracy holds up under aggressive preprocessing, tight bit-budget / bandwidth
 limits, and channel / bit-flip noise.
