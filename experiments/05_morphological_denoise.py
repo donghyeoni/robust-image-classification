@@ -1,4 +1,4 @@
-"""prob2_2 (baseline): classical denoising of noisy binary input.
+"""classical denoising of noisy binary input.
 
 Train on the fixed-threshold binary baseline with random bit-flip noise,
 denoised by a classical morphology-style filter (median / connected-component
@@ -10,6 +10,9 @@ The ``--denoiser`` flag selects which classical filter is applied.
 import torch
 import torch.nn as nn
 from torchvision import transforms
+
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
 
 from rc.config import build_common_parser
 from rc.data import build_dataloaders
@@ -27,7 +30,7 @@ DENOISERS = {
 
 
 def main():
-    parser = build_common_parser("prob2_2 baseline denoising", default_epochs=50)
+    parser = build_common_parser("baseline denoising", default_epochs=50)
     parser.add_argument("--denoiser", choices=list(DENOISERS), default="majority")
     parser.add_argument("--noise-levels", type=float, nargs="+",
                         default=[0.05, 0.10, 0.25, 0.50])

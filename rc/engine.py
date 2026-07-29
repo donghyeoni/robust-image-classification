@@ -116,7 +116,7 @@ def evaluate_checkpoints(model_factory: Callable[[], torch.nn.Module],
 
     ``model_factory`` must return a *fresh* (untrained) model with the correct
     architecture for the checkpoints. This consolidates the "loop over saved
-    weights and test each" block repeated across the prob2_* notebooks.
+    weights and test each" block repeated across the original denoising notebooks.
     """
     results = []
     for path in checkpoint_paths:

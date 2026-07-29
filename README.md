@@ -16,17 +16,21 @@ the classifier head is a 4-way linear layer).
 
 ## Experiments
 
-| Script | Notebook | What it does | Input channels |
-| --- | --- | --- | --- |
-| `prob1_1_rgb.py` | `prob1_1` | RGB baseline reference accuracy (256x256) | 3 (RGB) |
-| `prob1_2_binary.py` | `prob1_2` | Grayscale + fixed-threshold binarization (64x64) | 1 (binary) |
-| `prob1_3_edge.py` | `prob1_3` | "Ours": LoG+Sobel edge fusion -> blur -> Otsu binarize (64x64) | 1 (binary edge) |
-| `prob2_1_noise_robust.py` | `prob2_1` | Robustness: train with random-ratio bit-flip noise, test over noise 0.05-0.50, checkpoints | 1 (binary) |
-| `prob2_2_base_denoise.py` | `prob2_2_base` | Baseline denoising of noisy binary via classical morphology (median / connected-component / majority) | 1 (binary) |
-| `prob2_2_ours_denoise.py` | `prob2_2_ours` | "Ours" denoising: custom pixel rules `mismatch()` + `diagonal_solo()` inside the train loop | 1 (binary) |
-| `prob2_3_1_twochannel.py` | `prob2_3_1` | 2-channel fusion: baseline-blur channel + edge channel (45x45) | 2 |
-| `prob2_3_2_wavelet.py` | `prob2_3_2` | 4-channel Haar wavelet subbands (LL/LH/HL/HH), each Otsu-binarized (32x32) | 4 |
-| `prob2_3_3_jpeg_channel.py` | `prob2_3_3` | Bandwidth sim: JPEG to 2^16-byte budget + byte bit-error + denoise + restore, normalized RGB (224x224) | 3 (RGB) |
+The nine experiments fall into three themes: **input representations** (01–03),
+**noise robustness and denoising** (04–06), and **multi-channel and
+bandwidth-constrained inputs** (07–09).
+
+| Script | What it does | Input channels |
+| --- | --- | --- |
+| `01_rgb_baseline.py` | RGB baseline reference accuracy (256x256) | 3 (RGB) |
+| `02_binarized_input.py` | Grayscale + fixed-threshold binarization (64x64) | 1 (binary) |
+| `03_edge_preprocessing.py` | LoG+Sobel edge fusion -> blur -> Otsu binarize (64x64) | 1 (binary edge) |
+| `04_bitflip_robustness.py` | Train with random-ratio bit-flip noise, test over noise 0.05-0.50, checkpoints | 1 (binary) |
+| `05_morphological_denoise.py` | Denoise noisy binary input via classical morphology (median / connected-component / majority) | 1 (binary) |
+| `06_custom_pixel_denoise.py` | Custom pixel-repair rules `mismatch()` + `diagonal_solo()` inside the train loop | 1 (binary) |
+| `07_twochannel_fusion.py` | 2-channel fusion: blur channel + edge channel (45x45) | 2 |
+| `08_wavelet_subbands.py` | 4-channel Haar wavelet subbands (LL/LH/HL/HH), each Otsu-binarized (32x32) | 4 |
+| `09_jpeg_channel_budget.py` | Bandwidth sim: JPEG to 2^16-byte budget + byte bit-error + denoise + restore, normalized RGB (224x224) | 3 (RGB) |
 
 ## Dataset
 
@@ -69,17 +73,17 @@ robust-image-classification/
 │       ├── twochannel.py        # TwoChannelPreprocessing
 │       ├── wavelet.py           # PreprocessingWavelet (Haar subbands)
 │       └── jpeg_channel.py      # JpegChannelPreprocessing (JPEG byte-budget channel)
-├── experiments/                 # one thin script per problem
-│   ├── prob1_1_rgb.py
-│   ├── prob1_2_binary.py
-│   ├── prob1_3_edge.py
-│   ├── prob2_1_noise_robust.py
-│   ├── prob2_2_base_denoise.py
-│   ├── prob2_2_ours_denoise.py
-│   ├── prob2_3_1_twochannel.py
-│   ├── prob2_3_2_wavelet.py
-│   └── prob2_3_3_jpeg_channel.py
-├── notebooks/                   # original Jupyter notebooks (as submitted)
+├── experiments/                 # one thin script per experiment
+│   ├── 01_rgb_baseline.py
+│   ├── 02_binarized_input.py
+│   ├── 03_edge_preprocessing.py
+│   ├── 04_bitflip_robustness.py
+│   ├── 05_morphological_denoise.py
+│   ├── 06_custom_pixel_denoise.py
+│   ├── 07_twochannel_fusion.py
+│   ├── 08_wavelet_subbands.py
+│   └── 09_jpeg_channel_budget.py
+├── notebooks/                   # original Jupyter notebooks
 ├── docs/                        # project report (PDF)
 ├── requirements.txt
 ├── .gitignore
@@ -99,44 +103,44 @@ falls back to CPU.
 
 ## Usage
 
-Run any experiment as a module from the repository root so that the `rc`
-package is importable:
+Run any experiment from the repository root (each script adds the repo root to
+`sys.path`, so the `rc` package is importable):
 
 ```bash
 # 1. RGB baseline
-python -m experiments.prob1_1_rgb --data-root /path/to/Animals
+python experiments/01_rgb_baseline.py --data-root /path/to/Animals
 
 # 2. Binarized input
-python -m experiments.prob1_2_binary --data-root /path/to/Animals
+python experiments/02_binarized_input.py --data-root /path/to/Animals
 
-# 3. Edge-map ("ours") preprocessing
-python -m experiments.prob1_3_edge --data-root /path/to/Animals
+# 3. Edge-map preprocessing
+python experiments/03_edge_preprocessing.py --data-root /path/to/Animals
 
-# 4. Noise-robust training + noise sweep (checkpoints saved to --checkpoint-dir)
-python -m experiments.prob2_1_noise_robust \
-    --data-root /path/to/Animals --checkpoint-dir checkpoints/prob2_1
+# 4. Bit-flip noise-robust training + noise sweep (checkpoints saved to --checkpoint-dir)
+python experiments/04_bitflip_robustness.py \
+    --data-root /path/to/Animals --checkpoint-dir checkpoints/bitflip
 
-# 5. Baseline denoising (choose the classical filter)
-python -m experiments.prob2_2_base_denoise \
+# 5. Morphological denoising (choose the classical filter)
+python experiments/05_morphological_denoise.py \
     --data-root /path/to/Animals --denoiser majority \
-    --checkpoint-dir checkpoints/prob2_2_base
+    --checkpoint-dir checkpoints/morphological
 
-# 6. "Ours" denoising (custom pixel rules)
-python -m experiments.prob2_2_ours_denoise \
+# 6. Custom pixel-rule denoising
+python experiments/06_custom_pixel_denoise.py \
     --data-root /path/to/Animals --binarizer ours \
-    --checkpoint-dir checkpoints/prob2_2_ours
+    --checkpoint-dir checkpoints/custom_pixel
 
 # 7. Two-channel fusion
-python -m experiments.prob2_3_1_twochannel \
-    --data-root /path/to/Animals --checkpoint-dir checkpoints/prob2_3_1
+python experiments/07_twochannel_fusion.py \
+    --data-root /path/to/Animals --checkpoint-dir checkpoints/twochannel
 
 # 8. Haar wavelet subbands
-python -m experiments.prob2_3_2_wavelet \
-    --data-root /path/to/Animals --checkpoint-dir checkpoints/prob2_3_2
+python experiments/08_wavelet_subbands.py \
+    --data-root /path/to/Animals --checkpoint-dir checkpoints/wavelet
 
 # 9. Bandwidth-constrained JPEG channel
-python -m experiments.prob2_3_3_jpeg_channel \
-    --data-root /path/to/Animals --checkpoint-dir checkpoints/prob2_3_3
+python experiments/09_jpeg_channel_budget.py \
+    --data-root /path/to/Animals --checkpoint-dir checkpoints/jpeg_channel
 ```
 
 Common options (see `rc/config.py`): `--epochs`, `--batch-size`, `--lr`,
@@ -148,7 +152,7 @@ script also exposes a few experiment-specific flags (e.g. `--noise-levels`,
 ## Notes
 
 - **Checkpoints and datasets are gitignored.** Trained weights (`*.pth`,
-  `checkpoints/`, `prob*_weight/`), datasets (`data/`, `Animals/`) and
+  `checkpoints/`, `*_weight/`), datasets (`data/`, `Animals/`) and
   generated image outputs (`*.png`) are not tracked — see `.gitignore`.
 - The original Jupyter notebooks are preserved unchanged under `notebooks/`
   for reference; the runnable code lives in `rc/` + `experiments/`.

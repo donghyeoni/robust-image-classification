@@ -1,37 +1,38 @@
-"""prob1_3: 'ours' edge-map preprocessing.
+"""3-channel RGB baseline.
 
-LoG + Sobel edge fusion -> Gaussian blur -> Otsu binarize, single channel at
-64x64.
+Reference accuracy for a ResNet-18 trained on 256x256 RGB inputs.
 """
 
 import torch
 import torch.nn as nn
 from torchvision import transforms
 
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
 from rc.config import build_common_parser
 from rc.data import build_dataloaders
 from rc.engine import test, train
 from rc.model import build_resnet18
-from rc.preprocessing import OurPreprocessing
 
 
 def main():
-    parser = build_common_parser("prob1_3 edge-map preprocessing",
-                                 default_epochs=47, default_batch_size=40)
+    parser = build_common_parser("RGB baseline", default_epochs=40,
+                                 default_batch_size=20)
     args = parser.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     transform = transforms.Compose([
-        OurPreprocessing(size=64, threshold=128, crop=2, method="Otsu",
-                         return_type="tensor"),
+        transforms.Resize((256, 256)),
+        transforms.ToTensor(),
     ])
 
     _, trainloader, _, testloader = build_dataloaders(
         args.data_root, train_transform=transform, batch_size=args.batch_size,
-        num_workers=args.num_workers, shuffle_test=False)
+        num_workers=args.num_workers, shuffle_test=True)
 
-    model = build_resnet18(in_channels=1, num_classes=args.num_classes).to(device)
+    model = build_resnet18(in_channels=3, num_classes=args.num_classes).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     criterion = nn.CrossEntropyLoss()
 

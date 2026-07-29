@@ -1,4 +1,4 @@
-"""prob1_2: 1-channel binarized input.
+"""1-channel binarized input.
 
 Grayscale + fixed-threshold binarization at 64x64, single input channel.
 """
@@ -6,6 +6,9 @@ Grayscale + fixed-threshold binarization at 64x64, single input channel.
 import torch
 import torch.nn as nn
 from torchvision import transforms
+
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
 
 from rc.config import build_common_parser
 from rc.data import build_dataloaders
@@ -15,7 +18,7 @@ from rc.preprocessing import Binarize
 
 
 def main():
-    parser = build_common_parser("prob1_2 binarized input", default_epochs=40,
+    parser = build_common_parser("binarized input", default_epochs=40,
                                  default_batch_size=20)
     parser.add_argument("--threshold", type=int, default=128)
     args = parser.parse_args()

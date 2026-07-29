@@ -1,40 +1,39 @@
-"""prob2_3_2: 4-channel Haar wavelet subbands.
+"""two-channel fusion input.
 
-Haar DWT subbands LL/LH/HL/HH, each Otsu-binarized and stacked to a 4-channel
-32x32 input. Checkpoints saved and evaluated.
+Channel 0 = baseline blur+Otsu binary, channel 1 = edge-map binary, stacked to
+a 2-channel 45x45 input. Checkpoints saved and evaluated.
 """
 
 import torch
 import torch.nn as nn
 from torchvision import transforms
 
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
 from rc.config import build_common_parser
 from rc.data import build_dataloaders
 from rc.engine import evaluate_checkpoints, test, train
 from rc.model import build_resnet18
-from rc.preprocessing import PreprocessingWavelet
+from rc.preprocessing import TwoChannelPreprocessing
 
 
 def main():
-    parser = build_common_parser("prob2_3_2 Haar wavelet subbands",
+    parser = build_common_parser("two-channel fusion",
                                  default_epochs=50)
-    parser.add_argument("--channels", nargs="+",
-                        default=["LL", "LH", "HL", "HH"])
     args = parser.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     transform = transforms.Compose([
-        PreprocessingWavelet(size=32, crop=2, use_channels=args.channels),
+        TwoChannelPreprocessing(size=45, crop=2),
     ])
 
     _, trainloader, _, testloader = build_dataloaders(
         args.data_root, train_transform=transform, batch_size=args.batch_size,
         num_workers=args.num_workers, shuffle_test=False)
 
-    in_channels = len(args.channels)
-    model = build_resnet18(in_channels=in_channels,
-                           num_classes=args.num_classes).to(device)
+    model = build_resnet18(in_channels=2, num_classes=args.num_classes).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
     criterion = nn.CrossEntropyLoss()
 
@@ -47,8 +46,7 @@ def main():
                         for e in checkpoint_epochs]
 
     def model_factory():
-        return build_resnet18(in_channels=in_channels,
-                              num_classes=args.num_classes)
+        return build_resnet18(in_channels=2, num_classes=args.num_classes)
 
     evaluate_checkpoints(model_factory, checkpoint_paths, device, testloader,
                          criterion)

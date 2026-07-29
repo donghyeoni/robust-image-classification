@@ -1,4 +1,4 @@
-"""prob2_1: noise-robust training.
+"""noise-robust training.
 
 Train on the fixed-threshold binary baseline with random-ratio bit-flip noise
 (so the model sees noise levels 0.05 / 0.10 / 0.25 / 0.50 during training),
@@ -10,6 +10,9 @@ import torch
 import torch.nn as nn
 from torchvision import transforms
 
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+
 from rc.config import build_common_parser
 from rc.data import build_dataloaders
 from rc.engine import evaluate_checkpoints, train
@@ -19,7 +22,7 @@ from rc.preprocessing import PreprocessingBaseline
 
 
 def main():
-    parser = build_common_parser("prob2_1 noise-robust training",
+    parser = build_common_parser("noise-robust training",
                                  default_epochs=50)
     parser.add_argument("--noise-levels", type=float, nargs="+",
                         default=[0.05, 0.10, 0.25, 0.50],

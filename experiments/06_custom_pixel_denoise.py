@@ -1,4 +1,4 @@
-"""prob2_2 (ours): custom pixel-rule denoising inside the training loop.
+"""custom pixel-rule denoising inside the training loop.
 
 Unlike the other experiments, preprocessing/denoising here runs *per image
 inside* the loop rather than as a dataset transform, so the dataset yields raw
@@ -14,6 +14,9 @@ binarization (edge-map 'ours' or fixed-threshold 'baseline').
 
 import torch
 import torch.nn as nn
+
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
 
 from rc.config import build_common_parser
 from rc.data import build_dataloaders, pil_collate_fn
@@ -32,7 +35,7 @@ def make_binarizer(kind):
 
 
 def main():
-    parser = build_common_parser("prob2_2 'ours' denoising", default_epochs=50)
+    parser = build_common_parser("'ours' denoising", default_epochs=50)
     parser.add_argument("--binarizer", choices=["ours", "baseline"], default="ours")
     parser.add_argument("--test-noise", type=float, default=0.1,
                         help="Fixed test-time noise ratio.")
