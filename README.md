@@ -85,8 +85,10 @@ robust-image-classification/
 │   ├── 07_twochannel_fusion.py
 │   ├── 08_wavelet_subbands.py
 │   └── 09_jpeg_channel_budget.py
-├── notebooks/                   # original Jupyter notebooks
+├── results/
+│   └── notebook_reference/      # training/eval logs preserved from the original notebook runs
 ├── docs/                        # project report (PDF)
+├── RESULTS.md                   # headline accuracies from the preserved runs
 ├── requirements.txt
 ├── .gitignore
 └── README.md
@@ -156,9 +158,12 @@ script also exposes a few experiment-specific flags (e.g. `--noise-levels`,
 - **Checkpoints and datasets are gitignored.** Trained weights (`*.pth`,
   `checkpoints/`, `*_weight/`), datasets (`data/`, `Animals/`) and
   generated image outputs (`*.png`) are not tracked — see `.gitignore`.
-- The original Jupyter notebooks are preserved unchanged under `notebooks/`
-  for reference; the runnable code lives in `rc/` + `experiments/`.
+- **Not reproducible without data.** These experiments require the 4-class
+  Animals ImageFolder (not public) and a GPU, so they are not re-run here. The
+  runnable code lives in `rc/` + `experiments/`; supply `--data-root` to run.
+- The original Jupyter notebooks have been removed. Their **training/evaluation
+  logs (the actual measured accuracies)** are preserved under
+  `results/notebook_reference/`, and the headline numbers are summarized in
+  [RESULTS.md](RESULTS.md).
 - The project report (`docs/Robust Image Classification under Bandwidth
-  Constraints.pdf`) documents the methodology and results in detail. No
-  metrics are reproduced in this README to avoid restating numbers out of
-  context.
+  Constraints.pdf`) documents the methodology and results in detail.

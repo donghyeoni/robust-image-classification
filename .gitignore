@@ -4,6 +4,10 @@ __pycache__/
 *.egg-info/
 .ipynb_checkpoints/
 
+# Virtual environment
+.venv/
+venv/
+
 # Model checkpoints / weights
 *.pth
 checkpoints/
@@ -13,8 +17,9 @@ checkpoints/
 data/
 Animals/
 
-# Generated image outputs
+# Generated image outputs (but keep committed results/ artifacts)
 *.png
+!results/**
 
 # OS
 .DS_Store

@@ -1,0 +1,247 @@
+[cell 01 stream stdout]
+# of trainset = 788
+# of trainloader = 200
+input size: torch.Size([1, 64, 64]), 2
+
+[cell 03 stream stderr]
+  2%|▉                                           | 1/47 [00:18<13:55, 18.16s/it]
+[cell 03 stream stdout]
+Epoch [1/47] - Loss: 0.987279, Accuracy: 0.5721
+
+[cell 03 stream stderr]
+  4%|█▊                                          | 2/47 [00:35<13:13, 17.64s/it]
+[cell 03 stream stdout]
+Epoch [2/47] - Loss: 0.781138, Accuracy: 0.6806
+
+[cell 03 stream stderr]
+  6%|██▊                                         | 3/47 [00:54<13:20, 18.20s/it]
+[cell 03 stream stdout]
+Epoch [3/47] - Loss: 0.629463, Accuracy: 0.7521
+
+[cell 03 stream stderr]
+  9%|███▋                                        | 4/47 [01:11<12:45, 17.79s/it]
+[cell 03 stream stdout]
+Epoch [4/47] - Loss: 0.508428, Accuracy: 0.8081
+
+[cell 03 stream stderr]
+ 11%|████▋                                       | 5/47 [01:28<12:19, 17.60s/it]
+[cell 03 stream stdout]
+Epoch [5/47] - Loss: 0.390215, Accuracy: 0.8528
+
+[cell 03 stream stderr]
+ 13%|█████▌                                      | 6/47 [01:45<11:53, 17.40s/it]
+[cell 03 stream stdout]
+Epoch [6/47] - Loss: 0.261039, Accuracy: 0.9034
+
+[cell 03 stream stderr]
+ 15%|██████▌                                     | 7/47 [02:02<11:31, 17.29s/it]
+[cell 03 stream stdout]
+Epoch [7/47] - Loss: 0.193402, Accuracy: 0.9313
+
+[cell 03 stream stderr]
+ 17%|███████▍                                    | 8/47 [02:19<11:11, 17.23s/it]
+[cell 03 stream stdout]
+Epoch [8/47] - Loss: 0.146084, Accuracy: 0.9466
+
+[cell 03 stream stderr]
+ 19%|████████▍                                   | 9/47 [02:37<10:53, 17.20s/it]
+[cell 03 stream stdout]
+Epoch [9/47] - Loss: 0.099761, Accuracy: 0.9637
+
+[cell 03 stream stderr]
+ 21%|█████████▏                                 | 10/47 [02:54<10:37, 17.24s/it]
+[cell 03 stream stdout]
+Epoch [10/47] - Loss: 0.095807, Accuracy: 0.9659
+
+[cell 03 stream stderr]
+ 23%|██████████                                 | 11/47 [03:11<10:24, 17.34s/it]
+[cell 03 stream stdout]
+Epoch [11/47] - Loss: 0.083658, Accuracy: 0.9701
+
+[cell 03 stream stderr]
+ 26%|██████████▉                                | 12/47 [03:29<10:11, 17.46s/it]
+[cell 03 stream stdout]
+Epoch [12/47] - Loss: 0.071457, Accuracy: 0.9770
+
+[cell 03 stream stderr]
+ 28%|███████████▉                               | 13/47 [03:47<09:54, 17.49s/it]
+[cell 03 stream stdout]
+Epoch [13/47] - Loss: 0.062424, Accuracy: 0.9789
+
+[cell 03 stream stderr]
+ 30%|████████████▊                              | 14/47 [04:04<09:39, 17.55s/it]
+[cell 03 stream stdout]
+Epoch [14/47] - Loss: 0.046923, Accuracy: 0.9841
+
+[cell 03 stream stderr]
+ 32%|█████████████▋                             | 15/47 [04:22<09:21, 17.54s/it]
+[cell 03 stream stdout]
+Epoch [15/47] - Loss: 0.061705, Accuracy: 0.9780
+
+[cell 03 stream stderr]
+ 34%|██████████████▋                            | 16/47 [04:40<09:11, 17.80s/it]
+[cell 03 stream stdout]
+Epoch [16/47] - Loss: 0.040313, Accuracy: 0.9856
+
+[cell 03 stream stderr]
+ 36%|███████████████▌                           | 17/47 [04:58<08:55, 17.86s/it]
+[cell 03 stream stdout]
+Epoch [17/47] - Loss: 0.062463, Accuracy: 0.9781
+
+[cell 03 stream stderr]
+ 38%|████████████████▍                          | 18/47 [05:16<08:35, 17.78s/it]
+[cell 03 stream stdout]
+Epoch [18/47] - Loss: 0.036869, Accuracy: 0.9874
+
+[cell 03 stream stderr]
+ 40%|█████████████████▍                         | 19/47 [05:34<08:16, 17.72s/it]
+[cell 03 stream stdout]
+Epoch [19/47] - Loss: 0.038361, Accuracy: 0.9869
+
+[cell 03 stream stderr]
+ 43%|██████████████████▎                        | 20/47 [05:51<07:55, 17.63s/it]
+[cell 03 stream stdout]
+Epoch [20/47] - Loss: 0.039595, Accuracy: 0.9868
+
+[cell 03 stream stderr]
+ 45%|███████████████████▏                       | 21/47 [06:09<07:39, 17.66s/it]
+[cell 03 stream stdout]
+Epoch [21/47] - Loss: 0.038854, Accuracy: 0.9878
+
+[cell 03 stream stderr]
+ 47%|████████████████████▏                      | 22/47 [06:26<07:21, 17.65s/it]
+[cell 03 stream stdout]
+Epoch [22/47] - Loss: 0.035427, Accuracy: 0.9884
+
+[cell 03 stream stderr]
+ 49%|█████████████████████                      | 23/47 [06:44<07:05, 17.73s/it]
+[cell 03 stream stdout]
+Epoch [23/47] - Loss: 0.030538, Accuracy: 0.9885
+
+[cell 03 stream stderr]
+ 51%|█████████████████████▉                     | 24/47 [07:02<06:51, 17.89s/it]
+[cell 03 stream stdout]
+Epoch [24/47] - Loss: 0.046010, Accuracy: 0.9838
+
+[cell 03 stream stderr]
+ 53%|██████████████████████▊                    | 25/47 [07:20<06:31, 17.80s/it]
+[cell 03 stream stdout]
+Epoch [25/47] - Loss: 0.030764, Accuracy: 0.9885
+
+[cell 03 stream stderr]
+ 55%|███████████████████████▊                   | 26/47 [07:38<06:16, 17.92s/it]
+[cell 03 stream stdout]
+Epoch [26/47] - Loss: 0.054325, Accuracy: 0.9821
+
+[cell 03 stream stderr]
+ 57%|████████████████████████▋                  | 27/47 [07:56<05:58, 17.94s/it]
+[cell 03 stream stdout]
+Epoch [27/47] - Loss: 0.025566, Accuracy: 0.9918
+
+[cell 03 stream stderr]
+ 60%|█████████████████████████▌                 | 28/47 [08:14<05:40, 17.90s/it]
+[cell 03 stream stdout]
+Epoch [28/47] - Loss: 0.021562, Accuracy: 0.9918
+
+[cell 03 stream stderr]
+ 62%|██████████████████████████▌                | 29/47 [08:32<05:21, 17.88s/it]
+[cell 03 stream stdout]
+Epoch [29/47] - Loss: 0.015771, Accuracy: 0.9940
+
+[cell 03 stream stderr]
+ 64%|███████████████████████████▍               | 30/47 [08:49<05:01, 17.76s/it]
+[cell 03 stream stdout]
+Epoch [30/47] - Loss: 0.044829, Accuracy: 0.9838
+
+[cell 03 stream stderr]
+ 66%|████████████████████████████▎              | 31/47 [09:07<04:44, 17.77s/it]
+[cell 03 stream stdout]
+Epoch [31/47] - Loss: 0.028048, Accuracy: 0.9901
+
+[cell 03 stream stderr]
+ 68%|█████████████████████████████▎             | 32/47 [09:25<04:27, 17.81s/it]
+[cell 03 stream stdout]
+Epoch [32/47] - Loss: 0.026687, Accuracy: 0.9916
+
+[cell 03 stream stderr]
+ 70%|██████████████████████████████▏            | 33/47 [09:43<04:09, 17.79s/it]
+[cell 03 stream stdout]
+Epoch [33/47] - Loss: 0.020942, Accuracy: 0.9919
+
+[cell 03 stream stderr]
+ 72%|███████████████████████████████            | 34/47 [10:01<03:52, 17.87s/it]
+[cell 03 stream stdout]
+Epoch [34/47] - Loss: 0.019573, Accuracy: 0.9932
+
+[cell 03 stream stderr]
+ 74%|████████████████████████████████           | 35/47 [10:19<03:34, 17.87s/it]
+[cell 03 stream stdout]
+Epoch [35/47] - Loss: 0.035838, Accuracy: 0.9884
+
+[cell 03 stream stderr]
+ 77%|████████████████████████████████▉          | 36/47 [10:37<03:16, 17.89s/it]
+[cell 03 stream stdout]
+Epoch [36/47] - Loss: 0.016283, Accuracy: 0.9955
+
+[cell 03 stream stderr]
+ 79%|█████████████████████████████████▊         | 37/47 [10:55<02:58, 17.89s/it]
+[cell 03 stream stdout]
+Epoch [37/47] - Loss: 0.011136, Accuracy: 0.9958
+
+[cell 03 stream stderr]
+ 81%|██████████████████████████████████▊        | 38/47 [11:12<02:40, 17.88s/it]
+[cell 03 stream stdout]
+Epoch [38/47] - Loss: 0.031186, Accuracy: 0.9895
+
+[cell 03 stream stderr]
+ 83%|███████████████████████████████████▋       | 39/47 [11:30<02:23, 17.90s/it]
+[cell 03 stream stdout]
+Epoch [39/47] - Loss: 0.040419, Accuracy: 0.9876
+
+[cell 03 stream stderr]
+ 85%|████████████████████████████████████▌      | 40/47 [11:48<02:05, 17.87s/it]
+[cell 03 stream stdout]
+Epoch [40/47] - Loss: 0.022360, Accuracy: 0.9920
+
+[cell 03 stream stderr]
+ 87%|█████████████████████████████████████▌     | 41/47 [12:06<01:47, 17.86s/it]
+[cell 03 stream stdout]
+Epoch [41/47] - Loss: 0.040898, Accuracy: 0.9865
+
+[cell 03 stream stderr]
+ 89%|██████████████████████████████████████▍    | 42/47 [12:24<01:29, 17.85s/it]
+[cell 03 stream stdout]
+Epoch [42/47] - Loss: 0.013264, Accuracy: 0.9959
+
+[cell 03 stream stderr]
+ 91%|███████████████████████████████████████▎   | 43/47 [12:41<01:11, 17.79s/it]
+[cell 03 stream stdout]
+Epoch [43/47] - Loss: 0.009208, Accuracy: 0.9970
+
+[cell 03 stream stderr]
+ 94%|████████████████████████████████████████▎  | 44/47 [12:59<00:53, 17.75s/it]
+[cell 03 stream stdout]
+Epoch [44/47] - Loss: 0.007296, Accuracy: 0.9970
+
+[cell 03 stream stderr]
+ 96%|█████████████████████████████████████████▏ | 45/47 [13:17<00:35, 17.80s/it]
+[cell 03 stream stdout]
+Epoch [45/47] - Loss: 0.020582, Accuracy: 0.9938
+
+[cell 03 stream stderr]
+ 98%|██████████████████████████████████████████ | 46/47 [13:35<00:17, 17.85s/it]
+[cell 03 stream stdout]
+Epoch [46/47] - Loss: 0.044837, Accuracy: 0.9844
+
+[cell 03 stream stderr]
+100%|███████████████████████████████████████████| 47/47 [13:53<00:00, 17.74s/it]
+
+[cell 03 stream stdout]
+Epoch [47/47] - Loss: 0.012814, Accuracy: 0.9961
+
+[cell 03 stream stderr]
+100%|███████████████████████████████████████████| 19/19 [00:01<00:00,  9.50it/s]
+[cell 03 stream stdout]
+test loss : 1.5294 / test_accuracy : 0.7263
+
+[cell 03 stream stderr]
