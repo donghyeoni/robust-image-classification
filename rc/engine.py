@@ -127,3 +127,71 @@ def evaluate_checkpoints(model_factory: Callable[[], torch.nn.Module],
         results.append((path, *test(model, device, test_loader, criterion,
                                      batch_fn=batch_fn)))
     return results
+
+
+def get_confusion_matrix(model, dataloader, device, num_classes: int = 4,
+                         batch_fn: Optional[BatchFn] = None) -> np.ndarray:
+    """Return the ``num_classes x num_classes`` confusion matrix on ``dataloader``.
+
+    Rows are the true classes, columns the predicted ones. ``batch_fn`` has the
+    same meaning as in :func:`test`, so the per-pixel-denoising experiments can
+    reuse this without materialising a separate loader.
+    """
+    from sklearn.metrics import confusion_matrix
+
+    model.eval()
+    all_preds, all_labels = [], []
+
+    with torch.no_grad():
+        for batch in dataloader:
+            X, y = _to_device_batch(batch, device, batch_fn)
+            preds = model(X).argmax(dim=1)
+            all_preds.append(preds.cpu())
+            all_labels.append(y.cpu())
+
+    if not all_preds:
+        raise ValueError("dataloader yielded no batches")
+
+    return confusion_matrix(torch.cat(all_labels).numpy(),
+                            torch.cat(all_preds).numpy(),
+                            labels=range(num_classes))
+
+
+def plot_confusion_matrix(cm: np.ndarray, class_names=None, save_path=None,
+                          cmap: str = "Oranges"):
+    """Render ``cm`` as an annotated heatmap.
+
+    Writes to ``save_path`` when given, otherwise shows the figure. Returns the
+    matplotlib figure so callers can compose it further.
+    """
+    import matplotlib
+    if save_path is not None:
+        matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    num_classes = cm.shape[0]
+    if class_names is None:
+        class_names = [f"C{i}" for i in range(num_classes)]
+
+    fig, ax = plt.subplots(figsize=(4, 4))
+    ax.imshow(cm, cmap=cmap)
+
+    ax.set_xticks(range(num_classes), class_names)
+    ax.set_yticks(range(num_classes), class_names)
+    ax.set_xlabel("Predicted")
+    ax.set_ylabel("Actual")
+
+    # Annotate each cell, flipping the text colour on dark backgrounds.
+    threshold = cm.max() / 2 if cm.max() else 0
+    for i in range(num_classes):
+        for j in range(num_classes):
+            ax.text(j, i, format(cm[i, j], "d"), ha="center", va="center",
+                    color="white" if cm[i, j] > threshold else "black")
+
+    fig.tight_layout()
+    if save_path is not None:
+        fig.savefig(save_path, dpi=150)
+        plt.close(fig)
+    else:
+        plt.show()
+    return fig
