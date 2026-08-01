@@ -77,12 +77,41 @@ class ArrayToTensor:
         return transforms.ToTensor()(Image.fromarray(img_np))
 
 
+def _neighbours(t: torch.Tensor):
+    """Return the 8 shifted views aligned with the interior of ``t``.
+
+    Order is row-major over the 3x3 window, centre excluded — the same order the
+    original per-pixel implementation produced with
+    ``cat((patch.flatten()[:4], patch.flatten()[5:]))``.
+    """
+    return (t[..., :-2, :-2], t[..., :-2, 1:-1], t[..., :-2, 2:],
+            t[..., 1:-1, :-2],                   t[..., 1:-1, 2:],
+            t[..., 2:, :-2],  t[..., 2:, 1:-1],  t[..., 2:, 2:])
+
+
 def mismatch(tensor_img: torch.Tensor, radius: int = 1) -> torch.Tensor:
     """Flip a pixel whose entire neighbourhood differs from it.
 
     A pixel that disagrees with *all* of its 8 neighbours is treated as an
-    isolated flip and inverted. Operates on a 2-D byte tensor.
+    isolated flip and inverted. Accepts a 2-D ``H x W`` byte tensor or any
+    batched ``... x H x W`` stack; the border is left untouched.
+
+    ``radius`` other than 1 falls back to the original per-pixel loop.
     """
+    if radius != 1:
+        return _mismatch_loop(tensor_img, radius)
+
+    centre = tensor_img[..., 1:-1, 1:-1]
+    all_differ = torch.ones_like(centre, dtype=torch.bool)
+    for n in _neighbours(tensor_img):
+        all_differ &= n != centre
+
+    output = tensor_img.clone()
+    output[..., 1:-1, 1:-1] = torch.where(all_differ, 255 - centre, centre)
+    return output
+
+
+def _mismatch_loop(tensor_img: torch.Tensor, radius: int) -> torch.Tensor:
     h, w = tensor_img.shape
     output = tensor_img.clone()
     for i in range(radius, h - radius):
@@ -100,19 +129,19 @@ def diagonal_solo(tensor_img: torch.Tensor) -> torch.Tensor:
     """Flip a pixel connected to the foreground only through one diagonal.
 
     If exactly one of the 4 diagonal neighbours matches the centre while all 4
-    straight (N/S/E/W) neighbours differ, the centre is inverted. Operates on
-    a 2-D byte tensor.
+    straight (N/S/E/W) neighbours differ, the centre is inverted. Accepts a 2-D
+    ``H x W`` byte tensor or any batched ``... x H x W`` stack; the border is
+    left untouched.
     """
-    h, w = tensor_img.shape
+    nw, n, ne, w_, e, sw, s, se = _neighbours(tensor_img)
+    centre = tensor_img[..., 1:-1, 1:-1]
+
+    diag_matches = ((nw == centre).int() + (ne == centre).int()
+                    + (sw == centre).int() + (se == centre).int())
+    straight_differ = ((n != centre).int() + (s != centre).int()
+                       + (w_ != centre).int() + (e != centre).int())
+    flip = (diag_matches == 1) & (straight_differ == 4)
+
     output = tensor_img.clone()
-    for i in range(1, h - 1):
-        for j in range(1, w - 1):
-            center = tensor_img[i, j]
-            diag = [tensor_img[i - 1, j - 1], tensor_img[i - 1, j + 1],
-                    tensor_img[i + 1, j - 1], tensor_img[i + 1, j + 1]]
-            straight = [tensor_img[i - 1, j], tensor_img[i + 1, j],
-                        tensor_img[i, j - 1], tensor_img[i, j + 1]]
-            if (sum([d == center for d in diag]) == 1
-                    and sum([s != center for s in straight]) == 4):
-                output[i, j] = 255 - center
+    output[..., 1:-1, 1:-1] = torch.where(flip, 255 - centre, centre)
     return output

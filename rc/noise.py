@@ -76,6 +76,19 @@ class AddRandomNoise:
         return _wrap(out, self.return_type)
 
 
+def _flip_pixels_tensor(tensor_img: torch.Tensor, ratio: float) -> torch.Tensor:
+    """Invert ``ratio`` of the pixels of a ``[1, H, W]`` byte tensor."""
+    img = tensor_img.clone()
+    h, w = img.shape[1], img.shape[2]
+    num_noisy = int(h * w * ratio)
+    if num_noisy > 0:
+        coords = torch.randperm(h * w)[:num_noisy]
+        y = coords // w
+        x = coords % w
+        img[0, y, x] = 255 - img[0, y, x]
+    return img
+
+
 class AddRandomNoiseTensor:
     """Tensor-domain variant used by the 'ours' denoising pipeline.
 
@@ -87,13 +100,19 @@ class AddRandomNoiseTensor:
         self.candidate_ratios = list(candidate_ratios)
 
     def __call__(self, tensor_img: torch.Tensor) -> torch.Tensor:
-        ratio = random.choice(self.candidate_ratios)
-        img = tensor_img.clone()
-        h, w = img.shape[1], img.shape[2]
-        num_noisy = int(h * w * ratio)
-        if num_noisy > 0:
-            coords = torch.randperm(h * w)[:num_noisy]
-            y = coords // w
-            x = coords % w
-            img[0, y, x] = 255 - img[0, y, x]
-        return img
+        return _flip_pixels_tensor(tensor_img, random.choice(self.candidate_ratios))
+
+
+class AddNoiseTensor:
+    """Fixed-ratio tensor-domain counterpart of :class:`AddNoise`.
+
+    Test-time partner for :class:`AddRandomNoiseTensor`: it keeps the noise in
+    the binary domain, so the evaluation input matches what the model was
+    trained on.
+    """
+
+    def __init__(self, noise_ratio: float):
+        self.noise_ratio = noise_ratio
+
+    def __call__(self, tensor_img: torch.Tensor) -> torch.Tensor:
+        return _flip_pixels_tensor(tensor_img, self.noise_ratio)

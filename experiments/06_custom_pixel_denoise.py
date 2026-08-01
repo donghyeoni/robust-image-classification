@@ -23,7 +23,7 @@ from rc.data import build_dataloaders, pil_collate_fn
 from rc.denoise import diagonal_solo, mismatch
 from rc.engine import evaluate_checkpoints, train
 from rc.model import build_resnet18
-from rc.noise import AddNoise, AddRandomNoiseTensor
+from rc.noise import AddNoise, AddNoiseTensor, AddRandomNoiseTensor
 from rc.preprocessing import OurPreprocessing, PreprocessingBaseline
 
 
@@ -39,6 +39,12 @@ def main():
     parser.add_argument("--binarizer", choices=["ours", "baseline"], default="ours")
     parser.add_argument("--test-noise", type=float, default=0.1,
                         help="Fixed test-time noise ratio.")
+    parser.add_argument("--legacy-test-pipeline", action="store_true",
+                        help="Reproduce the original notebook's test path, which "
+                             "re-ran the binarizer over the already-binarized "
+                             "noisy image. This does not match how the model was "
+                             "trained and collapses accuracy to chance; kept only "
+                             "for reproducing the archived numbers.")
     args = parser.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -46,31 +52,33 @@ def main():
     train_noise = AddRandomNoiseTensor()
 
     def train_batch_fn(images, labels, device):
-        batch = []
-        for img in images:
-            t = binarizer(img)          # [1, H, W] byte
-            t = train_noise(t)          # add tensor-domain bit-flip noise
-            t = t.to(device)[0]         # [H, W]
-            t = mismatch(t)
-            t = diagonal_solo(t)
-            batch.append(t)
-        X = torch.stack(batch).unsqueeze(1).float()  # [B, 1, H, W]
-        return X, labels.to(device)
+        # Binarize + noise per image (cv2/PIL domain), then run both pixel rules
+        # over the whole batch at once — mismatch/diagonal_solo are batched.
+        batch = [train_noise(binarizer(img))[0] for img in images]
+        X = torch.stack(batch).to(device)             # [B, H, W] byte
+        X = diagonal_solo(mismatch(X))
+        return X.unsqueeze(1).float(), labels.to(device)
 
-    test_noise = AddNoise(noise_ratio=args.test_noise, return_type="pil")
+    legacy_noise = AddNoise(noise_ratio=args.test_noise, return_type="pil")
+    test_noise = AddNoiseTensor(noise_ratio=args.test_noise)
 
     def test_batch_fn(images, labels, device):
         batch = []
         for img in images:
-            t = binarizer(img)                # [1, H, W] byte
-            arr = t[0].cpu().numpy()          # [H, W] uint8
-            noisy_pil = test_noise(arr)       # numpy -> PIL
-            t = binarizer(noisy_pil)          # re-binarize -> [1, H, W] byte
-            t = mismatch(t.to(device)[0])
-            t = diagonal_solo(t)
-            batch.append(t)
-        X = torch.stack(batch).unsqueeze(1).float()
-        return X, labels.to(device)
+            t = binarizer(img)                    # [1, H, W] byte
+            if args.legacy_test_pipeline:
+                # Original path: back to numpy, add noise, then push the
+                # *already binary* image through the binarizer a second time.
+                # OurPreprocessing runs LoG+Sobel+Otsu, so this produces a
+                # representation the model never saw while training.
+                t = binarizer(legacy_noise(t[0].cpu().numpy()))
+            else:
+                # Match the training path: noise stays in the binary domain.
+                t = test_noise(t)
+            batch.append(t[0])
+        X = torch.stack(batch).to(device)          # [B, H, W] byte
+        X = diagonal_solo(mismatch(X))
+        return X.unsqueeze(1).float(), labels.to(device)
 
     _, trainloader, _, testloader = build_dataloaders(
         args.data_root, train_transform=None, batch_size=args.batch_size,
