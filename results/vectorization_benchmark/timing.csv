@@ -1,0 +1,4 @@
+method,images,per_pixel_seconds,vectorized_seconds,identical_outputs
+majority 3x3,200,3.16,0.0631,True
+custom rules (ours),200,46.25,0.0488,True
+"MRF(1.5,0.7)",200,4.47,0.2327,True

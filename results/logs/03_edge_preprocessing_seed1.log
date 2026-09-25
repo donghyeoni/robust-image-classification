@@ -1,0 +1,55 @@
+03_edge_preprocessing epoch 1/50 loss 0.991818 acc 0.5700 3.1s
+03_edge_preprocessing epoch 2/50 loss 0.761704 acc 0.6873 3.1s
+03_edge_preprocessing epoch 3/50 loss 0.608996 acc 0.7665 3.1s
+03_edge_preprocessing epoch 4/50 loss 0.499978 acc 0.8133 3.0s
+03_edge_preprocessing epoch 5/50 loss 0.367490 acc 0.8608 3.1s
+03_edge_preprocessing epoch 6/50 loss 0.258781 acc 0.9073 3.1s
+03_edge_preprocessing epoch 7/50 loss 0.193478 acc 0.9314 3.1s
+03_edge_preprocessing epoch 8/50 loss 0.143324 acc 0.9477 3.2s
+03_edge_preprocessing epoch 9/50 loss 0.114081 acc 0.9583 3.0s
+03_edge_preprocessing epoch 10/50 loss 0.109805 acc 0.9597 3.1s
+03_edge_preprocessing epoch 11/50 loss 0.062075 acc 0.9792 3.0s
+03_edge_preprocessing epoch 12/50 loss 0.081984 acc 0.9712 3.1s
+03_edge_preprocessing epoch 13/50 loss 0.056679 acc 0.9799 3.0s
+03_edge_preprocessing epoch 14/50 loss 0.065763 acc 0.9761 3.2s
+03_edge_preprocessing epoch 15/50 loss 0.059087 acc 0.9798 3.0s
+03_edge_preprocessing epoch 16/50 loss 0.040036 acc 0.9866 2.8s
+03_edge_preprocessing epoch 17/50 loss 0.044711 acc 0.9846 3.2s
+03_edge_preprocessing epoch 18/50 loss 0.049836 acc 0.9826 3.2s
+03_edge_preprocessing epoch 19/50 loss 0.045323 acc 0.9844 2.9s
+03_edge_preprocessing epoch 20/50 loss 0.037985 acc 0.9874 3.1s
+03_edge_preprocessing epoch 21/50 loss 0.039563 acc 0.9855 3.0s
+03_edge_preprocessing epoch 22/50 loss 0.049644 acc 0.9832 3.1s
+03_edge_preprocessing epoch 23/50 loss 0.031700 acc 0.9900 3.0s
+03_edge_preprocessing epoch 24/50 loss 0.041915 acc 0.9865 3.0s
+03_edge_preprocessing epoch 25/50 loss 0.015381 acc 0.9942 3.0s
+03_edge_preprocessing epoch 26/50 loss 0.020720 acc 0.9926 3.1s
+03_edge_preprocessing epoch 27/50 loss 0.053334 acc 0.9822 3.0s
+03_edge_preprocessing epoch 28/50 loss 0.026361 acc 0.9904 3.0s
+03_edge_preprocessing epoch 29/50 loss 0.034959 acc 0.9888 3.0s
+03_edge_preprocessing epoch 30/50 loss 0.021067 acc 0.9925 3.1s
+03_edge_preprocessing epoch 31/50 loss 0.032838 acc 0.9876 3.2s
+03_edge_preprocessing epoch 32/50 loss 0.037693 acc 0.9879 3.1s
+03_edge_preprocessing epoch 33/50 loss 0.010914 acc 0.9962 3.2s
+03_edge_preprocessing epoch 34/50 loss 0.023292 acc 0.9910 3.1s
+03_edge_preprocessing epoch 35/50 loss 0.038211 acc 0.9878 3.1s
+03_edge_preprocessing epoch 36/50 loss 0.024268 acc 0.9926 3.1s
+03_edge_preprocessing epoch 37/50 loss 0.048910 acc 0.9845 3.0s
+03_edge_preprocessing epoch 38/50 loss 0.009521 acc 0.9975 3.0s
+03_edge_preprocessing epoch 39/50 loss 0.016261 acc 0.9936 2.9s
+03_edge_preprocessing epoch 40/50 loss 0.029628 acc 0.9904 3.2s
+03_edge_preprocessing epoch 41/50 loss 0.017780 acc 0.9940 3.0s
+03_edge_preprocessing epoch 42/50 loss 0.029960 acc 0.9904 3.1s
+03_edge_preprocessing epoch 43/50 loss 0.011267 acc 0.9960 3.1s
+03_edge_preprocessing epoch 44/50 loss 0.013347 acc 0.9959 3.1s
+03_edge_preprocessing epoch 45/50 loss 0.026011 acc 0.9910 3.0s
+03_edge_preprocessing epoch 46/50 loss 0.026919 acc 0.9904 3.1s
+03_edge_preprocessing epoch 47/50 loss 0.013070 acc 0.9950 3.0s
+03_edge_preprocessing epoch 48/50 loss 0.010408 acc 0.9962 2.9s
+03_edge_preprocessing epoch 49/50 loss 0.011928 acc 0.9965 2.8s
+03_edge_preprocessing epoch 50/50 loss 0.020767 acc 0.9935 3.1s
+03_edge_preprocessing test epoch 10 noise None acc 0.6433 bal 0.6433
+03_edge_preprocessing test epoch 20 noise None acc 0.6467 bal 0.6467
+03_edge_preprocessing test epoch 30 noise None acc 0.7033 bal 0.7033
+03_edge_preprocessing test epoch 40 noise None acc 0.7050 bal 0.7050
+03_edge_preprocessing test epoch 50 noise None acc 0.7000 bal 0.7000

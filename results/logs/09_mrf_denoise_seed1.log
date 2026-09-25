@@ -1,0 +1,70 @@
+09_mrf_denoise epoch 1/50 loss 1.363549 acc 0.3446 3.2s
+09_mrf_denoise epoch 2/50 loss 1.283502 acc 0.3909 3.0s
+09_mrf_denoise epoch 3/50 loss 1.244444 acc 0.4246 3.0s
+09_mrf_denoise epoch 4/50 loss 1.210170 acc 0.4422 2.9s
+09_mrf_denoise epoch 5/50 loss 1.173382 acc 0.4691 3.2s
+09_mrf_denoise epoch 6/50 loss 1.140351 acc 0.4770 2.9s
+09_mrf_denoise epoch 7/50 loss 1.087256 acc 0.5152 3.0s
+09_mrf_denoise epoch 8/50 loss 1.040350 acc 0.5433 3.1s
+09_mrf_denoise epoch 9/50 loss 0.981785 acc 0.5639 3.0s
+09_mrf_denoise epoch 10/50 loss 0.927590 acc 0.5910 2.8s
+09_mrf_denoise epoch 11/50 loss 0.860122 acc 0.6136 3.0s
+09_mrf_denoise epoch 12/50 loss 0.817581 acc 0.6349 3.1s
+09_mrf_denoise epoch 13/50 loss 0.761672 acc 0.6565 2.9s
+09_mrf_denoise epoch 14/50 loss 0.710542 acc 0.6850 3.0s
+09_mrf_denoise epoch 15/50 loss 0.685797 acc 0.6937 3.0s
+09_mrf_denoise epoch 16/50 loss 0.651632 acc 0.7024 3.0s
+09_mrf_denoise epoch 17/50 loss 0.618852 acc 0.7124 3.0s
+09_mrf_denoise epoch 18/50 loss 0.608973 acc 0.7191 3.0s
+09_mrf_denoise epoch 19/50 loss 0.580606 acc 0.7292 3.4s
+09_mrf_denoise epoch 20/50 loss 0.564009 acc 0.7391 2.9s
+09_mrf_denoise epoch 21/50 loss 0.552956 acc 0.7395 3.1s
+09_mrf_denoise epoch 22/50 loss 0.532343 acc 0.7498 3.4s
+09_mrf_denoise epoch 23/50 loss 0.521919 acc 0.7535 2.9s
+09_mrf_denoise epoch 24/50 loss 0.519178 acc 0.7571 3.1s
+09_mrf_denoise epoch 25/50 loss 0.518040 acc 0.7518 3.0s
+09_mrf_denoise epoch 26/50 loss 0.494813 acc 0.7545 2.9s
+09_mrf_denoise epoch 27/50 loss 0.504545 acc 0.7576 3.0s
+09_mrf_denoise epoch 28/50 loss 0.490553 acc 0.7625 3.2s
+09_mrf_denoise epoch 29/50 loss 0.474318 acc 0.7682 2.9s
+09_mrf_denoise epoch 30/50 loss 0.490952 acc 0.7570 2.9s
+09_mrf_denoise epoch 31/50 loss 0.469749 acc 0.7685 2.8s
+09_mrf_denoise epoch 32/50 loss 0.473255 acc 0.7666 3.2s
+09_mrf_denoise epoch 33/50 loss 0.465508 acc 0.7676 2.9s
+09_mrf_denoise epoch 34/50 loss 0.459099 acc 0.7739 2.8s
+09_mrf_denoise epoch 35/50 loss 0.470648 acc 0.7700 3.0s
+09_mrf_denoise epoch 36/50 loss 0.461377 acc 0.7711 3.1s
+09_mrf_denoise epoch 37/50 loss 0.460652 acc 0.7706 2.8s
+09_mrf_denoise epoch 38/50 loss 0.451561 acc 0.7731 2.8s
+09_mrf_denoise epoch 39/50 loss 0.455534 acc 0.7760 2.8s
+09_mrf_denoise epoch 40/50 loss 0.457619 acc 0.7785 2.9s
+09_mrf_denoise epoch 41/50 loss 0.436890 acc 0.7809 2.8s
+09_mrf_denoise epoch 42/50 loss 0.452971 acc 0.7712 3.0s
+09_mrf_denoise epoch 43/50 loss 0.436052 acc 0.7857 2.8s
+09_mrf_denoise epoch 44/50 loss 0.438762 acc 0.7873 3.0s
+09_mrf_denoise epoch 45/50 loss 0.435284 acc 0.7826 3.0s
+09_mrf_denoise epoch 46/50 loss 0.443572 acc 0.7750 3.1s
+09_mrf_denoise epoch 47/50 loss 0.432006 acc 0.7823 3.2s
+09_mrf_denoise epoch 48/50 loss 0.419725 acc 0.7827 3.0s
+09_mrf_denoise epoch 49/50 loss 0.454983 acc 0.7722 2.7s
+09_mrf_denoise epoch 50/50 loss 0.417161 acc 0.7897 2.9s
+09_mrf_denoise test epoch 10 noise 0.05 acc 0.5117 bal 0.5117
+09_mrf_denoise test epoch 10 noise 0.1 acc 0.5033 bal 0.5033
+09_mrf_denoise test epoch 10 noise 0.25 acc 0.4733 bal 0.4733
+09_mrf_denoise test epoch 10 noise 0.5 acc 0.2333 bal 0.2333
+09_mrf_denoise test epoch 20 noise 0.05 acc 0.5017 bal 0.5017
+09_mrf_denoise test epoch 20 noise 0.1 acc 0.4950 bal 0.4950
+09_mrf_denoise test epoch 20 noise 0.25 acc 0.4833 bal 0.4833
+09_mrf_denoise test epoch 20 noise 0.5 acc 0.2483 bal 0.2483
+09_mrf_denoise test epoch 30 noise 0.05 acc 0.5717 bal 0.5717
+09_mrf_denoise test epoch 30 noise 0.1 acc 0.5650 bal 0.5650
+09_mrf_denoise test epoch 30 noise 0.25 acc 0.5183 bal 0.5183
+09_mrf_denoise test epoch 30 noise 0.5 acc 0.2400 bal 0.2400
+09_mrf_denoise test epoch 40 noise 0.05 acc 0.5717 bal 0.5717
+09_mrf_denoise test epoch 40 noise 0.1 acc 0.5683 bal 0.5683
+09_mrf_denoise test epoch 40 noise 0.25 acc 0.5333 bal 0.5333
+09_mrf_denoise test epoch 40 noise 0.5 acc 0.2367 bal 0.2367
+09_mrf_denoise test epoch 50 noise 0.05 acc 0.5633 bal 0.5633
+09_mrf_denoise test epoch 50 noise 0.1 acc 0.5533 bal 0.5533
+09_mrf_denoise test epoch 50 noise 0.25 acc 0.5100 bal 0.5100
+09_mrf_denoise test epoch 50 noise 0.5 acc 0.2467 bal 0.2467

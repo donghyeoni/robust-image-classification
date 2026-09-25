@@ -1,0 +1,70 @@
+08_custom_pixel_denoise epoch 1/50 loss 1.209477 acc 0.4255 3.7s
+08_custom_pixel_denoise epoch 2/50 loss 1.113092 acc 0.4798 3.5s
+08_custom_pixel_denoise epoch 3/50 loss 1.056340 acc 0.5051 3.5s
+08_custom_pixel_denoise epoch 4/50 loss 1.032168 acc 0.5194 3.4s
+08_custom_pixel_denoise epoch 5/50 loss 0.991031 acc 0.5339 3.4s
+08_custom_pixel_denoise epoch 6/50 loss 0.956903 acc 0.5605 3.5s
+08_custom_pixel_denoise epoch 7/50 loss 0.942530 acc 0.5663 3.5s
+08_custom_pixel_denoise epoch 8/50 loss 0.901703 acc 0.5847 3.4s
+08_custom_pixel_denoise epoch 9/50 loss 0.889003 acc 0.5873 3.4s
+08_custom_pixel_denoise epoch 10/50 loss 0.854640 acc 0.6054 3.4s
+08_custom_pixel_denoise epoch 11/50 loss 0.836720 acc 0.6142 3.5s
+08_custom_pixel_denoise epoch 12/50 loss 0.793446 acc 0.6391 3.4s
+08_custom_pixel_denoise epoch 13/50 loss 0.767899 acc 0.6475 3.4s
+08_custom_pixel_denoise epoch 14/50 loss 0.734987 acc 0.6609 3.5s
+08_custom_pixel_denoise epoch 15/50 loss 0.726838 acc 0.6641 3.5s
+08_custom_pixel_denoise epoch 16/50 loss 0.682530 acc 0.6857 3.5s
+08_custom_pixel_denoise epoch 17/50 loss 0.663374 acc 0.6936 3.4s
+08_custom_pixel_denoise epoch 18/50 loss 0.659509 acc 0.6936 3.5s
+08_custom_pixel_denoise epoch 19/50 loss 0.622699 acc 0.7060 3.5s
+08_custom_pixel_denoise epoch 20/50 loss 0.606005 acc 0.7140 3.5s
+08_custom_pixel_denoise epoch 21/50 loss 0.598798 acc 0.7191 3.5s
+08_custom_pixel_denoise epoch 22/50 loss 0.588067 acc 0.7235 3.5s
+08_custom_pixel_denoise epoch 23/50 loss 0.530848 acc 0.7426 3.4s
+08_custom_pixel_denoise epoch 24/50 loss 0.543788 acc 0.7388 3.5s
+08_custom_pixel_denoise epoch 25/50 loss 0.548133 acc 0.7332 3.5s
+08_custom_pixel_denoise epoch 26/50 loss 0.543644 acc 0.7400 3.6s
+08_custom_pixel_denoise epoch 27/50 loss 0.524337 acc 0.7485 3.4s
+08_custom_pixel_denoise epoch 28/50 loss 0.523900 acc 0.7442 3.6s
+08_custom_pixel_denoise epoch 29/50 loss 0.502635 acc 0.7586 3.4s
+08_custom_pixel_denoise epoch 30/50 loss 0.501510 acc 0.7552 3.5s
+08_custom_pixel_denoise epoch 31/50 loss 0.494666 acc 0.7614 3.4s
+08_custom_pixel_denoise epoch 32/50 loss 0.502204 acc 0.7559 3.4s
+08_custom_pixel_denoise epoch 33/50 loss 0.484693 acc 0.7575 3.4s
+08_custom_pixel_denoise epoch 34/50 loss 0.484671 acc 0.7591 3.6s
+08_custom_pixel_denoise epoch 35/50 loss 0.467627 acc 0.7680 3.6s
+08_custom_pixel_denoise epoch 36/50 loss 0.485138 acc 0.7601 3.4s
+08_custom_pixel_denoise epoch 37/50 loss 0.465194 acc 0.7715 3.4s
+08_custom_pixel_denoise epoch 38/50 loss 0.475179 acc 0.7622 3.6s
+08_custom_pixel_denoise epoch 39/50 loss 0.482165 acc 0.7581 3.6s
+08_custom_pixel_denoise epoch 40/50 loss 0.469144 acc 0.7686 3.4s
+08_custom_pixel_denoise epoch 41/50 loss 0.471171 acc 0.7681 3.5s
+08_custom_pixel_denoise epoch 42/50 loss 0.468750 acc 0.7638 3.6s
+08_custom_pixel_denoise epoch 43/50 loss 0.460345 acc 0.7748 3.6s
+08_custom_pixel_denoise epoch 44/50 loss 0.468408 acc 0.7709 3.4s
+08_custom_pixel_denoise epoch 45/50 loss 0.468255 acc 0.7674 3.2s
+08_custom_pixel_denoise epoch 46/50 loss 0.452890 acc 0.7764 3.5s
+08_custom_pixel_denoise epoch 47/50 loss 0.460315 acc 0.7742 3.5s
+08_custom_pixel_denoise epoch 48/50 loss 0.443916 acc 0.7810 3.3s
+08_custom_pixel_denoise epoch 49/50 loss 0.449819 acc 0.7740 3.2s
+08_custom_pixel_denoise epoch 50/50 loss 0.437353 acc 0.7772 3.2s
+08_custom_pixel_denoise test epoch 10 noise 0.05 acc 0.6833 bal 0.6833
+08_custom_pixel_denoise test epoch 10 noise 0.1 acc 0.6783 bal 0.6783
+08_custom_pixel_denoise test epoch 10 noise 0.25 acc 0.6000 bal 0.6000
+08_custom_pixel_denoise test epoch 10 noise 0.5 acc 0.2500 bal 0.2500
+08_custom_pixel_denoise test epoch 20 noise 0.05 acc 0.7000 bal 0.7000
+08_custom_pixel_denoise test epoch 20 noise 0.1 acc 0.7017 bal 0.7017
+08_custom_pixel_denoise test epoch 20 noise 0.25 acc 0.6267 bal 0.6267
+08_custom_pixel_denoise test epoch 20 noise 0.5 acc 0.2583 bal 0.2583
+08_custom_pixel_denoise test epoch 30 noise 0.05 acc 0.7183 bal 0.7183
+08_custom_pixel_denoise test epoch 30 noise 0.1 acc 0.7150 bal 0.7150
+08_custom_pixel_denoise test epoch 30 noise 0.25 acc 0.6583 bal 0.6583
+08_custom_pixel_denoise test epoch 30 noise 0.5 acc 0.2400 bal 0.2400
+08_custom_pixel_denoise test epoch 40 noise 0.05 acc 0.7133 bal 0.7133
+08_custom_pixel_denoise test epoch 40 noise 0.1 acc 0.7167 bal 0.7167
+08_custom_pixel_denoise test epoch 40 noise 0.25 acc 0.6500 bal 0.6500
+08_custom_pixel_denoise test epoch 40 noise 0.5 acc 0.2450 bal 0.2450
+08_custom_pixel_denoise test epoch 50 noise 0.05 acc 0.7267 bal 0.7267
+08_custom_pixel_denoise test epoch 50 noise 0.1 acc 0.7167 bal 0.7167
+08_custom_pixel_denoise test epoch 50 noise 0.25 acc 0.6650 bal 0.6650
+08_custom_pixel_denoise test epoch 50 noise 0.5 acc 0.2383 bal 0.2383

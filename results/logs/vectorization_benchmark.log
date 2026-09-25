@@ -1,0 +1,3 @@
+{'method': 'majority 3x3', 'images': 200, 'per_pixel_seconds': '3.16', 'vectorized_seconds': '0.0631', 'identical_outputs': True}
+{'method': 'custom rules (ours)', 'images': 200, 'per_pixel_seconds': '46.25', 'vectorized_seconds': '0.0488', 'identical_outputs': True}
+{'method': 'MRF(1.5,0.7)', 'images': 200, 'per_pixel_seconds': '4.47', 'vectorized_seconds': '0.2327', 'identical_outputs': True}

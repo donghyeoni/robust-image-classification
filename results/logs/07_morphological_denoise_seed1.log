@@ -1,0 +1,70 @@
+07_morphological_denoise epoch 1/50 loss 1.362347 acc 0.3483 2.6s
+07_morphological_denoise epoch 2/50 loss 1.274751 acc 0.4011 2.3s
+07_morphological_denoise epoch 3/50 loss 1.236900 acc 0.4241 2.2s
+07_morphological_denoise epoch 4/50 loss 1.195859 acc 0.4467 2.5s
+07_morphological_denoise epoch 5/50 loss 1.161320 acc 0.4690 2.3s
+07_morphological_denoise epoch 6/50 loss 1.118243 acc 0.4899 2.4s
+07_morphological_denoise epoch 7/50 loss 1.064993 acc 0.5169 2.2s
+07_morphological_denoise epoch 8/50 loss 1.018525 acc 0.5423 2.5s
+07_morphological_denoise epoch 9/50 loss 0.945894 acc 0.5693 2.4s
+07_morphological_denoise epoch 10/50 loss 0.897064 acc 0.6046 2.3s
+07_morphological_denoise epoch 11/50 loss 0.823512 acc 0.6301 2.3s
+07_morphological_denoise epoch 12/50 loss 0.781876 acc 0.6495 2.4s
+07_morphological_denoise epoch 13/50 loss 0.717037 acc 0.6727 2.5s
+07_morphological_denoise epoch 14/50 loss 0.668334 acc 0.6970 2.6s
+07_morphological_denoise epoch 15/50 loss 0.642623 acc 0.7081 2.5s
+07_morphological_denoise epoch 16/50 loss 0.599243 acc 0.7230 2.3s
+07_morphological_denoise epoch 17/50 loss 0.580162 acc 0.7294 2.4s
+07_morphological_denoise epoch 18/50 loss 0.555313 acc 0.7399 2.3s
+07_morphological_denoise epoch 19/50 loss 0.532433 acc 0.7450 2.3s
+07_morphological_denoise epoch 20/50 loss 0.518535 acc 0.7504 2.6s
+07_morphological_denoise epoch 21/50 loss 0.515538 acc 0.7504 2.5s
+07_morphological_denoise epoch 22/50 loss 0.501474 acc 0.7636 2.5s
+07_morphological_denoise epoch 23/50 loss 0.481631 acc 0.7634 2.4s
+07_morphological_denoise epoch 24/50 loss 0.484237 acc 0.7665 2.5s
+07_morphological_denoise epoch 25/50 loss 0.477262 acc 0.7618 2.6s
+07_morphological_denoise epoch 26/50 loss 0.483935 acc 0.7641 2.5s
+07_morphological_denoise epoch 27/50 loss 0.461835 acc 0.7736 2.5s
+07_morphological_denoise epoch 28/50 loss 0.446226 acc 0.7814 2.6s
+07_morphological_denoise epoch 29/50 loss 0.456464 acc 0.7774 2.5s
+07_morphological_denoise epoch 30/50 loss 0.457513 acc 0.7679 2.3s
+07_morphological_denoise epoch 31/50 loss 0.450125 acc 0.7791 2.5s
+07_morphological_denoise epoch 32/50 loss 0.450508 acc 0.7761 2.5s
+07_morphological_denoise epoch 33/50 loss 0.444028 acc 0.7785 2.5s
+07_morphological_denoise epoch 34/50 loss 0.431490 acc 0.7846 2.3s
+07_morphological_denoise epoch 35/50 loss 0.444810 acc 0.7800 2.3s
+07_morphological_denoise epoch 36/50 loss 0.448017 acc 0.7754 2.4s
+07_morphological_denoise epoch 37/50 loss 0.431179 acc 0.7830 2.2s
+07_morphological_denoise epoch 38/50 loss 0.431236 acc 0.7762 2.2s
+07_morphological_denoise epoch 39/50 loss 0.414469 acc 0.7880 2.3s
+07_morphological_denoise epoch 40/50 loss 0.434261 acc 0.7806 2.3s
+07_morphological_denoise epoch 41/50 loss 0.423741 acc 0.7840 2.4s
+07_morphological_denoise epoch 42/50 loss 0.429808 acc 0.7815 2.7s
+07_morphological_denoise epoch 43/50 loss 0.412191 acc 0.7924 2.5s
+07_morphological_denoise epoch 44/50 loss 0.417987 acc 0.7853 2.4s
+07_morphological_denoise epoch 45/50 loss 0.412577 acc 0.7931 2.3s
+07_morphological_denoise epoch 46/50 loss 0.417959 acc 0.7851 2.4s
+07_morphological_denoise epoch 47/50 loss 0.414993 acc 0.7890 2.3s
+07_morphological_denoise epoch 48/50 loss 0.412382 acc 0.7869 2.7s
+07_morphological_denoise epoch 49/50 loss 0.426246 acc 0.7845 2.3s
+07_morphological_denoise epoch 50/50 loss 0.399880 acc 0.7963 2.4s
+07_morphological_denoise test epoch 10 noise 0.05 acc 0.5367 bal 0.5367
+07_morphological_denoise test epoch 10 noise 0.1 acc 0.5150 bal 0.5150
+07_morphological_denoise test epoch 10 noise 0.25 acc 0.4917 bal 0.4917
+07_morphological_denoise test epoch 10 noise 0.5 acc 0.2500 bal 0.2500
+07_morphological_denoise test epoch 20 noise 0.05 acc 0.5317 bal 0.5317
+07_morphological_denoise test epoch 20 noise 0.1 acc 0.5350 bal 0.5350
+07_morphological_denoise test epoch 20 noise 0.25 acc 0.5133 bal 0.5133
+07_morphological_denoise test epoch 20 noise 0.5 acc 0.2333 bal 0.2333
+07_morphological_denoise test epoch 30 noise 0.05 acc 0.5533 bal 0.5533
+07_morphological_denoise test epoch 30 noise 0.1 acc 0.5533 bal 0.5533
+07_morphological_denoise test epoch 30 noise 0.25 acc 0.5283 bal 0.5283
+07_morphological_denoise test epoch 30 noise 0.5 acc 0.2733 bal 0.2733
+07_morphological_denoise test epoch 40 noise 0.05 acc 0.5233 bal 0.5233
+07_morphological_denoise test epoch 40 noise 0.1 acc 0.5400 bal 0.5400
+07_morphological_denoise test epoch 40 noise 0.25 acc 0.4967 bal 0.4967
+07_morphological_denoise test epoch 40 noise 0.5 acc 0.2450 bal 0.2450
+07_morphological_denoise test epoch 50 noise 0.05 acc 0.5467 bal 0.5467
+07_morphological_denoise test epoch 50 noise 0.1 acc 0.5417 bal 0.5417
+07_morphological_denoise test epoch 50 noise 0.25 acc 0.5467 bal 0.5467
+07_morphological_denoise test epoch 50 noise 0.5 acc 0.2533 bal 0.2533

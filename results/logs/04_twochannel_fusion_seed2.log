@@ -1,0 +1,55 @@
+04_twochannel_fusion epoch 1/50 loss 0.962110 acc 0.5800 3.5s
+04_twochannel_fusion epoch 2/50 loss 0.737259 acc 0.7004 4.1s
+04_twochannel_fusion epoch 3/50 loss 0.613515 acc 0.7602 4.1s
+04_twochannel_fusion epoch 4/50 loss 0.480331 acc 0.8189 4.2s
+04_twochannel_fusion epoch 5/50 loss 0.368585 acc 0.8638 4.1s
+04_twochannel_fusion epoch 6/50 loss 0.285775 acc 0.8942 4.2s
+04_twochannel_fusion epoch 7/50 loss 0.194703 acc 0.9309 4.3s
+04_twochannel_fusion epoch 8/50 loss 0.167253 acc 0.9399 4.1s
+04_twochannel_fusion epoch 9/50 loss 0.134513 acc 0.9535 4.1s
+04_twochannel_fusion epoch 10/50 loss 0.096238 acc 0.9664 4.1s
+04_twochannel_fusion epoch 11/50 loss 0.112399 acc 0.9613 4.1s
+04_twochannel_fusion epoch 12/50 loss 0.080681 acc 0.9708 4.2s
+04_twochannel_fusion epoch 13/50 loss 0.077443 acc 0.9716 4.2s
+04_twochannel_fusion epoch 14/50 loss 0.065798 acc 0.9765 4.2s
+04_twochannel_fusion epoch 15/50 loss 0.059076 acc 0.9789 4.4s
+04_twochannel_fusion epoch 16/50 loss 0.054625 acc 0.9808 4.0s
+04_twochannel_fusion epoch 17/50 loss 0.050807 acc 0.9828 4.5s
+04_twochannel_fusion epoch 18/50 loss 0.066160 acc 0.9782 5.0s
+04_twochannel_fusion epoch 19/50 loss 0.042464 acc 0.9860 5.0s
+04_twochannel_fusion epoch 20/50 loss 0.055130 acc 0.9798 4.9s
+04_twochannel_fusion epoch 21/50 loss 0.043668 acc 0.9846 4.9s
+04_twochannel_fusion epoch 22/50 loss 0.048853 acc 0.9832 4.9s
+04_twochannel_fusion epoch 23/50 loss 0.050778 acc 0.9808 4.8s
+04_twochannel_fusion epoch 24/50 loss 0.049745 acc 0.9821 4.9s
+04_twochannel_fusion epoch 25/50 loss 0.027032 acc 0.9896 4.8s
+04_twochannel_fusion epoch 26/50 loss 0.043122 acc 0.9865 4.8s
+04_twochannel_fusion epoch 27/50 loss 0.038169 acc 0.9855 4.9s
+04_twochannel_fusion epoch 28/50 loss 0.031149 acc 0.9891 4.9s
+04_twochannel_fusion epoch 29/50 loss 0.036223 acc 0.9875 4.8s
+04_twochannel_fusion epoch 30/50 loss 0.039864 acc 0.9868 4.8s
+04_twochannel_fusion epoch 31/50 loss 0.031059 acc 0.9901 4.9s
+04_twochannel_fusion epoch 32/50 loss 0.032106 acc 0.9894 4.9s
+04_twochannel_fusion epoch 33/50 loss 0.025369 acc 0.9919 5.1s
+04_twochannel_fusion epoch 34/50 loss 0.033475 acc 0.9884 4.8s
+04_twochannel_fusion epoch 35/50 loss 0.041427 acc 0.9870 4.8s
+04_twochannel_fusion epoch 36/50 loss 0.025731 acc 0.9919 5.1s
+04_twochannel_fusion epoch 37/50 loss 0.017485 acc 0.9946 4.9s
+04_twochannel_fusion epoch 38/50 loss 0.028515 acc 0.9889 4.9s
+04_twochannel_fusion epoch 39/50 loss 0.042056 acc 0.9854 4.8s
+04_twochannel_fusion epoch 40/50 loss 0.015015 acc 0.9955 4.9s
+04_twochannel_fusion epoch 41/50 loss 0.013802 acc 0.9951 4.8s
+04_twochannel_fusion epoch 42/50 loss 0.037953 acc 0.9874 4.9s
+04_twochannel_fusion epoch 43/50 loss 0.044917 acc 0.9846 4.9s
+04_twochannel_fusion epoch 44/50 loss 0.018154 acc 0.9940 4.8s
+04_twochannel_fusion epoch 45/50 loss 0.016790 acc 0.9948 4.8s
+04_twochannel_fusion epoch 46/50 loss 0.029903 acc 0.9898 4.3s
+04_twochannel_fusion epoch 47/50 loss 0.017158 acc 0.9940 4.4s
+04_twochannel_fusion epoch 48/50 loss 0.015903 acc 0.9946 5.2s
+04_twochannel_fusion epoch 49/50 loss 0.014149 acc 0.9950 5.1s
+04_twochannel_fusion epoch 50/50 loss 0.025240 acc 0.9916 5.0s
+04_twochannel_fusion test epoch 10 noise None acc 0.6433 bal 0.6433
+04_twochannel_fusion test epoch 20 noise None acc 0.6950 bal 0.6950
+04_twochannel_fusion test epoch 30 noise None acc 0.7183 bal 0.7183
+04_twochannel_fusion test epoch 40 noise None acc 0.7200 bal 0.7200
+04_twochannel_fusion test epoch 50 noise None acc 0.7150 bal 0.7150

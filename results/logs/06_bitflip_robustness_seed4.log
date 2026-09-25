@@ -1,0 +1,70 @@
+06_bitflip_robustness epoch 1/50 loss 1.385472 acc 0.3196 2.4s
+06_bitflip_robustness epoch 2/50 loss 1.310662 acc 0.3744 2.2s
+06_bitflip_robustness epoch 3/50 loss 1.242353 acc 0.4215 2.1s
+06_bitflip_robustness epoch 4/50 loss 1.208132 acc 0.4350 2.0s
+06_bitflip_robustness epoch 5/50 loss 1.174472 acc 0.4515 2.1s
+06_bitflip_robustness epoch 6/50 loss 1.134034 acc 0.4830 2.2s
+06_bitflip_robustness epoch 7/50 loss 1.112594 acc 0.4906 2.2s
+06_bitflip_robustness epoch 8/50 loss 1.069424 acc 0.5138 2.1s
+06_bitflip_robustness epoch 9/50 loss 1.028110 acc 0.5337 2.3s
+06_bitflip_robustness epoch 10/50 loss 0.961747 acc 0.5666 2.4s
+06_bitflip_robustness epoch 11/50 loss 0.923248 acc 0.5849 2.0s
+06_bitflip_robustness epoch 12/50 loss 0.862195 acc 0.6122 2.3s
+06_bitflip_robustness epoch 13/50 loss 0.812145 acc 0.6390 2.0s
+06_bitflip_robustness epoch 14/50 loss 0.747275 acc 0.6669 2.1s
+06_bitflip_robustness epoch 15/50 loss 0.731282 acc 0.6679 2.2s
+06_bitflip_robustness epoch 16/50 loss 0.663482 acc 0.6994 2.3s
+06_bitflip_robustness epoch 17/50 loss 0.631939 acc 0.7106 2.2s
+06_bitflip_robustness epoch 18/50 loss 0.602146 acc 0.7163 2.3s
+06_bitflip_robustness epoch 19/50 loss 0.580706 acc 0.7304 2.0s
+06_bitflip_robustness epoch 20/50 loss 0.560868 acc 0.7359 2.2s
+06_bitflip_robustness epoch 21/50 loss 0.543683 acc 0.7414 2.0s
+06_bitflip_robustness epoch 22/50 loss 0.521989 acc 0.7499 2.3s
+06_bitflip_robustness epoch 23/50 loss 0.491114 acc 0.7640 2.2s
+06_bitflip_robustness epoch 24/50 loss 0.491825 acc 0.7656 2.1s
+06_bitflip_robustness epoch 25/50 loss 0.479503 acc 0.7576 1.9s
+06_bitflip_robustness epoch 26/50 loss 0.493335 acc 0.7596 1.9s
+06_bitflip_robustness epoch 27/50 loss 0.478838 acc 0.7671 1.8s
+06_bitflip_robustness epoch 28/50 loss 0.472697 acc 0.7656 2.1s
+06_bitflip_robustness epoch 29/50 loss 0.456338 acc 0.7766 2.2s
+06_bitflip_robustness epoch 30/50 loss 0.465545 acc 0.7682 2.3s
+06_bitflip_robustness epoch 31/50 loss 0.460238 acc 0.7710 2.1s
+06_bitflip_robustness epoch 32/50 loss 0.459902 acc 0.7729 2.3s
+06_bitflip_robustness epoch 33/50 loss 0.439110 acc 0.7853 2.0s
+06_bitflip_robustness epoch 34/50 loss 0.436443 acc 0.7841 2.1s
+06_bitflip_robustness epoch 35/50 loss 0.440775 acc 0.7808 2.0s
+06_bitflip_robustness epoch 36/50 loss 0.445868 acc 0.7756 2.1s
+06_bitflip_robustness epoch 37/50 loss 0.431682 acc 0.7816 2.1s
+06_bitflip_robustness epoch 38/50 loss 0.429266 acc 0.7835 2.3s
+06_bitflip_robustness epoch 39/50 loss 0.432410 acc 0.7762 2.3s
+06_bitflip_robustness epoch 40/50 loss 0.422574 acc 0.7870 2.0s
+06_bitflip_robustness epoch 41/50 loss 0.438078 acc 0.7781 2.3s
+06_bitflip_robustness epoch 42/50 loss 0.442035 acc 0.7730 2.2s
+06_bitflip_robustness epoch 43/50 loss 0.425914 acc 0.7880 2.1s
+06_bitflip_robustness epoch 44/50 loss 0.432577 acc 0.7794 2.3s
+06_bitflip_robustness epoch 45/50 loss 0.419954 acc 0.7835 2.2s
+06_bitflip_robustness epoch 46/50 loss 0.421164 acc 0.7860 2.0s
+06_bitflip_robustness epoch 47/50 loss 0.431927 acc 0.7799 2.2s
+06_bitflip_robustness epoch 48/50 loss 0.408844 acc 0.7931 2.0s
+06_bitflip_robustness epoch 49/50 loss 0.413148 acc 0.7881 2.1s
+06_bitflip_robustness epoch 50/50 loss 0.402460 acc 0.7967 2.2s
+06_bitflip_robustness test epoch 10 noise 0.05 acc 0.5617 bal 0.5617
+06_bitflip_robustness test epoch 10 noise 0.1 acc 0.5417 bal 0.5417
+06_bitflip_robustness test epoch 10 noise 0.25 acc 0.4983 bal 0.4983
+06_bitflip_robustness test epoch 10 noise 0.5 acc 0.2400 bal 0.2400
+06_bitflip_robustness test epoch 20 noise 0.05 acc 0.5867 bal 0.5867
+06_bitflip_robustness test epoch 20 noise 0.1 acc 0.5667 bal 0.5667
+06_bitflip_robustness test epoch 20 noise 0.25 acc 0.4833 bal 0.4833
+06_bitflip_robustness test epoch 20 noise 0.5 acc 0.2450 bal 0.2450
+06_bitflip_robustness test epoch 30 noise 0.05 acc 0.5450 bal 0.5450
+06_bitflip_robustness test epoch 30 noise 0.1 acc 0.5517 bal 0.5517
+06_bitflip_robustness test epoch 30 noise 0.25 acc 0.5350 bal 0.5350
+06_bitflip_robustness test epoch 30 noise 0.5 acc 0.2250 bal 0.2250
+06_bitflip_robustness test epoch 40 noise 0.05 acc 0.5983 bal 0.5983
+06_bitflip_robustness test epoch 40 noise 0.1 acc 0.5917 bal 0.5917
+06_bitflip_robustness test epoch 40 noise 0.25 acc 0.5717 bal 0.5717
+06_bitflip_robustness test epoch 40 noise 0.5 acc 0.2517 bal 0.2517
+06_bitflip_robustness test epoch 50 noise 0.05 acc 0.5883 bal 0.5883
+06_bitflip_robustness test epoch 50 noise 0.1 acc 0.5750 bal 0.5750
+06_bitflip_robustness test epoch 50 noise 0.25 acc 0.5600 bal 0.5600
+06_bitflip_robustness test epoch 50 noise 0.5 acc 0.2483 bal 0.2483

@@ -1,0 +1,55 @@
+02_binarized_input epoch 1/50 loss 1.119357 acc 0.5004 4.2s
+02_binarized_input epoch 2/50 loss 0.943562 acc 0.5996 4.6s
+02_binarized_input epoch 3/50 loss 0.845524 acc 0.6505 4.8s
+02_binarized_input epoch 4/50 loss 0.748013 acc 0.6963 4.6s
+02_binarized_input epoch 5/50 loss 0.636544 acc 0.7548 4.7s
+02_binarized_input epoch 6/50 loss 0.482569 acc 0.8177 4.7s
+02_binarized_input epoch 7/50 loss 0.394734 acc 0.8542 4.7s
+02_binarized_input epoch 8/50 loss 0.277986 acc 0.8968 4.8s
+02_binarized_input epoch 9/50 loss 0.201011 acc 0.9256 4.8s
+02_binarized_input epoch 10/50 loss 0.161089 acc 0.9453 4.6s
+02_binarized_input epoch 11/50 loss 0.132069 acc 0.9519 4.7s
+02_binarized_input epoch 12/50 loss 0.092076 acc 0.9669 4.8s
+02_binarized_input epoch 13/50 loss 0.092494 acc 0.9690 4.7s
+02_binarized_input epoch 14/50 loss 0.074698 acc 0.9760 4.4s
+02_binarized_input epoch 15/50 loss 0.106563 acc 0.9621 4.9s
+02_binarized_input epoch 16/50 loss 0.063078 acc 0.9781 4.9s
+02_binarized_input epoch 17/50 loss 0.060883 acc 0.9789 4.6s
+02_binarized_input epoch 18/50 loss 0.075105 acc 0.9732 4.7s
+02_binarized_input epoch 19/50 loss 0.046183 acc 0.9851 4.6s
+02_binarized_input epoch 20/50 loss 0.041360 acc 0.9851 4.6s
+02_binarized_input epoch 21/50 loss 0.048769 acc 0.9819 4.7s
+02_binarized_input epoch 22/50 loss 0.059503 acc 0.9792 4.6s
+02_binarized_input epoch 23/50 loss 0.054650 acc 0.9810 4.8s
+02_binarized_input epoch 24/50 loss 0.067114 acc 0.9772 5.0s
+02_binarized_input epoch 25/50 loss 0.035074 acc 0.9884 4.6s
+02_binarized_input epoch 26/50 loss 0.038857 acc 0.9862 4.5s
+02_binarized_input epoch 27/50 loss 0.036699 acc 0.9868 4.7s
+02_binarized_input epoch 28/50 loss 0.025244 acc 0.9920 4.6s
+02_binarized_input epoch 29/50 loss 0.033199 acc 0.9890 4.9s
+02_binarized_input epoch 30/50 loss 0.035045 acc 0.9888 4.4s
+02_binarized_input epoch 31/50 loss 0.038905 acc 0.9865 4.7s
+02_binarized_input epoch 32/50 loss 0.052002 acc 0.9820 4.8s
+02_binarized_input epoch 33/50 loss 0.022940 acc 0.9932 4.5s
+02_binarized_input epoch 34/50 loss 0.024934 acc 0.9924 4.7s
+02_binarized_input epoch 35/50 loss 0.027734 acc 0.9915 4.7s
+02_binarized_input epoch 36/50 loss 0.037771 acc 0.9870 4.7s
+02_binarized_input epoch 37/50 loss 0.032593 acc 0.9891 4.6s
+02_binarized_input epoch 38/50 loss 0.029629 acc 0.9888 3.8s
+02_binarized_input epoch 39/50 loss 0.027137 acc 0.9922 4.1s
+02_binarized_input epoch 40/50 loss 0.021926 acc 0.9934 5.2s
+02_binarized_input epoch 41/50 loss 0.025204 acc 0.9909 5.2s
+02_binarized_input epoch 42/50 loss 0.022204 acc 0.9926 5.0s
+02_binarized_input epoch 43/50 loss 0.015696 acc 0.9944 5.1s
+02_binarized_input epoch 44/50 loss 0.037767 acc 0.9885 4.9s
+02_binarized_input epoch 45/50 loss 0.021926 acc 0.9921 5.0s
+02_binarized_input epoch 46/50 loss 0.018792 acc 0.9930 5.1s
+02_binarized_input epoch 47/50 loss 0.021830 acc 0.9929 5.2s
+02_binarized_input epoch 48/50 loss 0.032320 acc 0.9910 4.9s
+02_binarized_input epoch 49/50 loss 0.011968 acc 0.9954 4.7s
+02_binarized_input epoch 50/50 loss 0.014423 acc 0.9954 5.1s
+02_binarized_input test epoch 10 noise None acc 0.6300 bal 0.6300
+02_binarized_input test epoch 20 noise None acc 0.6583 bal 0.6583
+02_binarized_input test epoch 30 noise None acc 0.6067 bal 0.6067
+02_binarized_input test epoch 40 noise None acc 0.6617 bal 0.6617
+02_binarized_input test epoch 50 noise None acc 0.5900 bal 0.5900

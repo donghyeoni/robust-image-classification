@@ -1,0 +1,55 @@
+01_rgb_baseline epoch 1/50 loss 0.856883 acc 0.6332 7.5s
+01_rgb_baseline epoch 2/50 loss 0.717852 acc 0.7023 6.9s
+01_rgb_baseline epoch 3/50 loss 0.650345 acc 0.7449 7.2s
+01_rgb_baseline epoch 4/50 loss 0.569701 acc 0.7829 7.3s
+01_rgb_baseline epoch 5/50 loss 0.520885 acc 0.8055 7.1s
+01_rgb_baseline epoch 6/50 loss 0.470039 acc 0.8220 7.3s
+01_rgb_baseline epoch 7/50 loss 0.421433 acc 0.8468 7.3s
+01_rgb_baseline epoch 8/50 loss 0.383443 acc 0.8634 6.9s
+01_rgb_baseline epoch 9/50 loss 0.361882 acc 0.8685 7.2s
+01_rgb_baseline epoch 10/50 loss 0.310756 acc 0.8811 7.2s
+01_rgb_baseline epoch 11/50 loss 0.271810 acc 0.9070 7.1s
+01_rgb_baseline epoch 12/50 loss 0.238342 acc 0.9129 7.1s
+01_rgb_baseline epoch 13/50 loss 0.201514 acc 0.9277 7.2s
+01_rgb_baseline epoch 14/50 loss 0.177210 acc 0.9359 7.3s
+01_rgb_baseline epoch 15/50 loss 0.144751 acc 0.9497 7.4s
+01_rgb_baseline epoch 16/50 loss 0.113760 acc 0.9591 7.1s
+01_rgb_baseline epoch 17/50 loss 0.108361 acc 0.9597 7.5s
+01_rgb_baseline epoch 18/50 loss 0.101531 acc 0.9650 7.0s
+01_rgb_baseline epoch 19/50 loss 0.076674 acc 0.9730 7.1s
+01_rgb_baseline epoch 20/50 loss 0.069752 acc 0.9761 7.3s
+01_rgb_baseline epoch 21/50 loss 0.045873 acc 0.9840 7.2s
+01_rgb_baseline epoch 22/50 loss 0.051684 acc 0.9838 7.3s
+01_rgb_baseline epoch 23/50 loss 0.046419 acc 0.9848 7.1s
+01_rgb_baseline epoch 24/50 loss 0.057758 acc 0.9801 7.2s
+01_rgb_baseline epoch 25/50 loss 0.047476 acc 0.9848 7.1s
+01_rgb_baseline epoch 26/50 loss 0.044318 acc 0.9841 7.4s
+01_rgb_baseline epoch 27/50 loss 0.037097 acc 0.9871 7.4s
+01_rgb_baseline epoch 28/50 loss 0.040182 acc 0.9865 7.4s
+01_rgb_baseline epoch 29/50 loss 0.034329 acc 0.9880 7.4s
+01_rgb_baseline epoch 30/50 loss 0.033831 acc 0.9881 7.3s
+01_rgb_baseline epoch 31/50 loss 0.026868 acc 0.9910 7.4s
+01_rgb_baseline epoch 32/50 loss 0.048775 acc 0.9842 7.3s
+01_rgb_baseline epoch 33/50 loss 0.030157 acc 0.9909 7.3s
+01_rgb_baseline epoch 34/50 loss 0.013795 acc 0.9956 7.3s
+01_rgb_baseline epoch 35/50 loss 0.035564 acc 0.9888 7.3s
+01_rgb_baseline epoch 36/50 loss 0.018173 acc 0.9944 7.4s
+01_rgb_baseline epoch 37/50 loss 0.026489 acc 0.9926 7.2s
+01_rgb_baseline epoch 38/50 loss 0.026583 acc 0.9918 7.2s
+01_rgb_baseline epoch 39/50 loss 0.015835 acc 0.9954 7.2s
+01_rgb_baseline epoch 40/50 loss 0.040491 acc 0.9876 7.1s
+01_rgb_baseline epoch 41/50 loss 0.017648 acc 0.9941 7.2s
+01_rgb_baseline epoch 42/50 loss 0.019133 acc 0.9926 7.6s
+01_rgb_baseline epoch 43/50 loss 0.017606 acc 0.9946 7.5s
+01_rgb_baseline epoch 44/50 loss 0.019902 acc 0.9928 7.0s
+01_rgb_baseline epoch 45/50 loss 0.015333 acc 0.9952 7.2s
+01_rgb_baseline epoch 46/50 loss 0.026429 acc 0.9911 7.3s
+01_rgb_baseline epoch 47/50 loss 0.024189 acc 0.9908 7.1s
+01_rgb_baseline epoch 48/50 loss 0.019105 acc 0.9938 7.1s
+01_rgb_baseline epoch 49/50 loss 0.014541 acc 0.9950 7.4s
+01_rgb_baseline epoch 50/50 loss 0.037126 acc 0.9879 7.5s
+01_rgb_baseline test epoch 10 noise None acc 0.7883 bal 0.7883
+01_rgb_baseline test epoch 20 noise None acc 0.8100 bal 0.8100
+01_rgb_baseline test epoch 30 noise None acc 0.8750 bal 0.8750
+01_rgb_baseline test epoch 40 noise None acc 0.8433 bal 0.8433
+01_rgb_baseline test epoch 50 noise None acc 0.8600 bal 0.8600

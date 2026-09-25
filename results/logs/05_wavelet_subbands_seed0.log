@@ -1,0 +1,55 @@
+05_wavelet_subbands epoch 1/50 loss 1.312372 acc 0.4243 3.5s
+05_wavelet_subbands epoch 2/50 loss 1.094626 acc 0.5238 3.3s
+05_wavelet_subbands epoch 3/50 loss 0.928717 acc 0.6028 3.1s
+05_wavelet_subbands epoch 4/50 loss 0.797630 acc 0.6715 3.4s
+05_wavelet_subbands epoch 5/50 loss 0.673237 acc 0.7270 3.1s
+05_wavelet_subbands epoch 6/50 loss 0.571125 acc 0.7729 3.1s
+05_wavelet_subbands epoch 7/50 loss 0.454900 acc 0.8260 3.1s
+05_wavelet_subbands epoch 8/50 loss 0.377488 acc 0.8605 3.4s
+05_wavelet_subbands epoch 9/50 loss 0.308651 acc 0.8848 3.4s
+05_wavelet_subbands epoch 10/50 loss 0.241592 acc 0.9130 3.3s
+05_wavelet_subbands epoch 11/50 loss 0.209754 acc 0.9261 2.9s
+05_wavelet_subbands epoch 12/50 loss 0.158289 acc 0.9440 3.3s
+05_wavelet_subbands epoch 13/50 loss 0.155298 acc 0.9469 2.7s
+05_wavelet_subbands epoch 14/50 loss 0.135742 acc 0.9533 3.0s
+05_wavelet_subbands epoch 15/50 loss 0.133186 acc 0.9544 3.6s
+05_wavelet_subbands epoch 16/50 loss 0.103184 acc 0.9650 3.7s
+05_wavelet_subbands epoch 17/50 loss 0.112626 acc 0.9607 3.6s
+05_wavelet_subbands epoch 18/50 loss 0.090859 acc 0.9714 3.3s
+05_wavelet_subbands epoch 19/50 loss 0.086449 acc 0.9701 3.4s
+05_wavelet_subbands epoch 20/50 loss 0.077722 acc 0.9745 3.3s
+05_wavelet_subbands epoch 21/50 loss 0.081818 acc 0.9701 3.5s
+05_wavelet_subbands epoch 22/50 loss 0.077962 acc 0.9724 3.4s
+05_wavelet_subbands epoch 23/50 loss 0.075811 acc 0.9758 3.5s
+05_wavelet_subbands epoch 24/50 loss 0.061698 acc 0.9776 3.6s
+05_wavelet_subbands epoch 25/50 loss 0.079369 acc 0.9736 3.5s
+05_wavelet_subbands epoch 26/50 loss 0.069200 acc 0.9771 3.5s
+05_wavelet_subbands epoch 27/50 loss 0.061647 acc 0.9776 3.5s
+05_wavelet_subbands epoch 28/50 loss 0.058770 acc 0.9806 3.5s
+05_wavelet_subbands epoch 29/50 loss 0.064818 acc 0.9769 3.5s
+05_wavelet_subbands epoch 30/50 loss 0.043345 acc 0.9868 3.6s
+05_wavelet_subbands epoch 31/50 loss 0.052896 acc 0.9835 3.7s
+05_wavelet_subbands epoch 32/50 loss 0.065042 acc 0.9792 3.6s
+05_wavelet_subbands epoch 33/50 loss 0.037585 acc 0.9878 3.7s
+05_wavelet_subbands epoch 34/50 loss 0.054455 acc 0.9792 3.5s
+05_wavelet_subbands epoch 35/50 loss 0.054130 acc 0.9828 3.6s
+05_wavelet_subbands epoch 36/50 loss 0.045649 acc 0.9851 3.6s
+05_wavelet_subbands epoch 37/50 loss 0.036979 acc 0.9898 3.5s
+05_wavelet_subbands epoch 38/50 loss 0.049479 acc 0.9844 3.5s
+05_wavelet_subbands epoch 39/50 loss 0.050557 acc 0.9820 3.7s
+05_wavelet_subbands epoch 40/50 loss 0.042800 acc 0.9858 3.6s
+05_wavelet_subbands epoch 41/50 loss 0.048366 acc 0.9835 3.5s
+05_wavelet_subbands epoch 42/50 loss 0.026823 acc 0.9910 3.3s
+05_wavelet_subbands epoch 43/50 loss 0.052858 acc 0.9826 3.7s
+05_wavelet_subbands epoch 44/50 loss 0.042033 acc 0.9872 3.4s
+05_wavelet_subbands epoch 45/50 loss 0.024284 acc 0.9910 3.3s
+05_wavelet_subbands epoch 46/50 loss 0.046094 acc 0.9845 3.4s
+05_wavelet_subbands epoch 47/50 loss 0.043882 acc 0.9846 3.5s
+05_wavelet_subbands epoch 48/50 loss 0.034361 acc 0.9890 3.7s
+05_wavelet_subbands epoch 49/50 loss 0.019042 acc 0.9942 3.4s
+05_wavelet_subbands epoch 50/50 loss 0.042925 acc 0.9859 3.3s
+05_wavelet_subbands test epoch 10 noise None acc 0.5600 bal 0.5600
+05_wavelet_subbands test epoch 20 noise None acc 0.5550 bal 0.5550
+05_wavelet_subbands test epoch 30 noise None acc 0.5700 bal 0.5700
+05_wavelet_subbands test epoch 40 noise None acc 0.5733 bal 0.5733
+05_wavelet_subbands test epoch 50 noise None acc 0.5783 bal 0.5783

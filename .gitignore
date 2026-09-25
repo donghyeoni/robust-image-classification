@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Model checkpoints
+*.pth
+checkpoints/
+
+# Datasets (not included)
+data/
+Animals/
+
+# Stray plot outputs; the committed results/ artifacts are kept
+*.png
+!results/**/*.png
+
+# OS
+.DS_Store
+Thumbs.db
