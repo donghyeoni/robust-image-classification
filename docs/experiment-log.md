@@ -208,7 +208,7 @@ Observations:
   (0.5967); 03 (0.7097) is above 02 (0.6190). 02 has the largest SD (0.0272).
 - **Noise, p = 0.05–0.25 (S-c).** 08 has the highest mean accuracy of 06–09
   at each of the three ratios (0.7203, 0.7070, 0.6453). The means of 06, 07
-  and 09 differ by at most 0.0134 at each of the three ratios.
+  and 09 differ by at most 0.0133 at each of the three ratios.
 - **Noise, p = 0.5 (S-c).** Mean accuracy of 06–09 is 0.2433–0.2510; with 4
   classes of 150 images each, predicting one class for every image gives
   0.25.

@@ -5,7 +5,6 @@ import time
 
 import numpy as np
 import torch
-from PIL import Image
 
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
@@ -107,7 +106,7 @@ def main():
     noise = AddNoise(args.ratio, return_type="array")
     trainset = build_dataset(args.data_root, "Train")
     idx = np.random.choice(len(trainset.samples), args.images, replace=False)
-    images = [noise(pre(Image.open(trainset.samples[i][0]))) for i in idx]
+    images = [noise(pre(trainset.loader(trainset.samples[i][0]))) for i in idx]
 
     rows = []
     for name, loop, vec in (

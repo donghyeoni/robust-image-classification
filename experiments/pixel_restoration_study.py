@@ -4,7 +4,6 @@ import os
 
 import numpy as np
 import torch
-from PIL import Image
 
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
@@ -38,7 +37,7 @@ def main():
 
     pre = PreprocessingBaseline(threshold=128, size=64, return_type="array")
     testset = build_dataset(args.data_root, "Test")
-    cleans = [pre(Image.open(p)) for p, _ in testset.samples]
+    cleans = [pre(testset.loader(p)) for p, _ in testset.samples]
 
     methods = {"none": lambda a: a, "median 3x3": MedianFilter(3),
                "majority 3x3": MajorityFilter(3), "custom rules (ours)": custom_rules,
